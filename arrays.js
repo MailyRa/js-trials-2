@@ -7,13 +7,22 @@ function printIndices(items) {
     console.log(`${items[i]} ${i}`);}
 }
 
-printIndices(['apple', 'berry', 'cherry'])
+// printIndices(['apple', 'berry', 'cherry'])
 
 // 2. everyOtherItem
 function everyOtherItem(items) {
-  // Replace this with your code
-}
+    
+    const result = []
 
+    for (const item in items){
+        if (item % 2 === 0) {
+            result.push(items[item]);
+        }
+    console.log(result)
+    }
+
+}
+everyOtherItem(['apple', 'berry', 'cherry'])
 
 // 3. smallestNItems
 function smallestNItems(items, n) {
