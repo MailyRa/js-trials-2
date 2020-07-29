@@ -3,19 +3,20 @@
 
 // 1. countWords
 function countWords(phrase) {
-    const wordCount = {};
+     const wordCounts = {};
 
-    for (const word of phrase.split('  ')) {
-        if (wordCount[word]) {
-            wordCount[word] += 1;
-        }
-        else {
-            wordCount[word] = 1;
-        }
+  for (const word of phrase.split(' ')) {
+    if (wordCounts[word]) {
+      wordCounts[word] += 1;
+    } else {
+      wordCounts[word] = 1;
     }
-    return wordCount;
+  }
+
+  return wordCounts;
 };
-countWords(["I my name is"])
+
+countWords(['I my name is'])
 
 // 2. getMelonsAtPrice
 function getMelonsAtPrice(price) {
