@@ -22,9 +22,12 @@ function everyOtherItem(items) {
     }
 
 }
-everyOtherItem(['apple', 'berry', 'cherry'])
+// everyOtherItem(['apple', 'berry', 'cherry'])
 
 // 3. smallestNItems
 function smallestNItems(items, n) {
-  // Replace this with your code
+    const sortedItems = items.sort((a, b) => a - b).slice(0, n);
+    sortedItems.reverse();
+
+    console.log(sortedItems);
 }
