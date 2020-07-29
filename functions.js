@@ -12,11 +12,25 @@ function isHometown(town) {
 
 // 2. getFullName
 function getFullName(first_name, last_name) {
-    return `${first} ${last}`;
+    return `${first_name} ${last_name}`;
 }
 
 
+function calculateTotal(basePrice, state, tax = 0.05) {
+  const subtotal = basePrice * (1 + tax);
 
-// 3. calculateTotal
+  let fee = 0;
+  if (state === 'CA') {
+    fee = 0.03 * subtotal;
+  } else if (state === 'PA') {
+    fee = 2;
+  } else if (state === 'MA') {
+    if (basePrice <= 100) {
+      fee = 1;
+    } else {
+      fee = 3;
+    }
+  }
 
-// Define your function here
+  return subtotal + fee;
+}
