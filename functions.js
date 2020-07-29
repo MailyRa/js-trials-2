@@ -3,7 +3,6 @@
 
 // 1. isHometown
 
-// Define your function here
 
 function isHometown(town) {
   return town === 'San Francisco';
@@ -11,13 +10,11 @@ function isHometown(town) {
 
 
 
-
-
-
-
 // 2. getFullName
+function getFullName(first_name, last_name) {
+    return `${first} ${last}`;
+}
 
-// Define your function here
 
 
 // 3. calculateTotal
